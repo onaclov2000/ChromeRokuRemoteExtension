@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Roku Remote",
+  "description": "This extension finds the first roku in your network, and lets you control it from your extension",
+  "version": "1",
+  "minimum_chrome_version": "23",
+  
+  "app": {
+    "background": {
+    "scripts": ["main.js"]
+   }
+  },
+"browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "ssdp.html"
+  },
+  "permissions": ["http://*/*",
+"https://www.googleapis.com/",
+    {"socket": [
+    "udp-bind",
+    "udp-send-to"
+    ]}
+  ]
+}
